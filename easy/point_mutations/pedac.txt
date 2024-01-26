@@ -1,0 +1,46 @@
+Write a program that can calculate the Hamming distance between two DNA strands.
+A mutation is simply a mistake that occurs during the creation or copying of a nucleic acid,
+in particular DNA. Because nucleic acids are vital to cellular functions, 
+mutations tend to cause a ripple effect throughout the cell.
+Although mutations are technically mistakes, a very rare mutation may equip the 
+cell with a beneficial attribute. In fact, the macro effects of evolution are 
+attributable to the accumulated result of beneficial microscopic mutations over many generations.
+
+The simplest and most common type of nucleic acid mutation is a point mutation,
+which replaces one base with another at a single nucleotide.
+By counting the number of differences between two homologous DNA strands taken
+from different genomes with a common ancestor, we get a measure of the minimum
+number of point mutations that could have occurred on the evolutionary path between the two strands.
+
+This is called the Hamming distance.
+
+The Hamming distance is only defined for sequences of equal length.
+If you have two sequences of unequal length, you should compute the Hamming distance over the shorter length.
+
+Understanding the problem 
+We are given 2 strings maybe equal length maybe not 
+Only evaluate the differences up to the lenght of the shortest string 
+add up the differences between both strings and that is the value needed to be returned 
+if there are no differences or the strings are empty return 0 
+
+Examples and testcases 
+We need a clas called DNA that has 2 method 
+the constructor method should take a DNA strand as an argument 
+the hamming_distance method will take another strand as an argument and return the differences
+
+
+Datastructures 
+We are given strings but I will convert the shorter string to array of character to iterate over 
+
+Algorithm 
+create a DNA class 
+create a getter method for strand 
+create the initialize method that takes dna strand as an argument and assigns it to @strand 
+create a instance method hamming_distance that takes a string argument 
+  create a local variable named counter and assign it to zero(keep track of hamming distance)
+  assign the shorter string to `shortest`
+  convert shortest into an array and iterate over each character aswell as the index value
+    if the current character is different from the value of the character from other string at the current index 
+      add one to counter  
+  return counter 
+

@@ -1,0 +1,56 @@
+Write a program that, given a word, computes the Scrabble score for that word.
+You'll need the following tile scores:
+
+Letter	Value
+A, E, I, O, U, L, N, R, S, T =>	1
+D, G =>	2
+B, C, M, P =>	3
+F, H, V, W, Y	=> 4
+K	=> 5
+J, X =>	8
+Q, Z =>	10
+How to Score
+
+Sum the values of all the tiles used in each word. For instance, 
+lets consider the word CABBAGE which has the following letters and point values:
+
+3 points for C
+1 point for each A (there are two)
+3 points for B (there are two)
+2 points for G
+1 point for E
+total: 14
+
+Understanding the problem 
+If the input is an a falsy value or an empty string return 0
+The standard input is a string and we will add the total of the character score based on the 
+chart and then return it
+
+Examples and test cases 
+best off of the test cases we will need a Scrabble class with 2 methods
+  the constructor method will take the argument and assign it to word
+  
+  the score method will iterate over each character of word 
+  the characters evaluation is case insesitive 
+  
+datastructure 
+the input is a string most likely or a falsy value (nil, or false)
+the ouput is an integer 
+the score chart is going to be captured by a hash 
+
+algorithm
+create a class named Scrabble with 2 methods 
+  create the hash for the scores 
+  
+  the constructor method will be passed an argument 
+    if the argument is falsy `word` will be assigned to an empty string 
+    otherwise we will assign the string argument to `word`
+    
+  the score method
+    assign the value of just the characters in uppercase to a variable called characters
+    create a counter variable to keep score 
+    iterate over each character of the characters
+      then iterate over the score hash 
+       find the what key the current character belongs to and at it's value to counter 
+    
+    return counter 

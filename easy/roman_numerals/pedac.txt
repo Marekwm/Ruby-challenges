@@ -1,0 +1,61 @@
+Write some code that converts modern decimal numbers into their Roman number equivalents.
+
+The Romans were a clever bunch. They conquered most of Europe and ruled it for hundreds of years. 
+They invented concrete and straight roads and even bikinis.
+One thing they never discovered though was the number zero. 
+This made writing and dating extensive histories of their exploits slightly more challenging,
+but the system of numbers they came up with is still in use today. 
+For example the BBC uses Roman numerals to date their programmes.
+
+The Romans wrote numbers using letters - I, V, X, L, C, D, M.
+Notice that these letters have lots of straight lines and are hence easy to hack into stone tablets.
+
+ 1  => I
+10  => X
+ 7  => VII
+To see this in practice, consider the example of 1990. In Roman numerals, 1990 is MCMXC:
+1000=M
+900=CM
+90=XC
+
+Understanding the problem 
+Given a number convert it into the roman numeral representation
+I stands for 1
+V stands for 5
+X stands for 10
+L stands for 50
+C stands for 100
+D stands for 500
+M stands for 1,000
+We are only concerned with whole numbers 0 are ignored 
+101 is CI
+
+Examples and test cases 
+The provided test cases show that we need a class called RomanNumeral that has 2 methods
+ The constructor method will take an integer argument 
+ The to_roman method will convert that integer into roman numerals 
+ 
+Datastructures 
+Our output will be a string 
+we need a hash to convert numbers to roman numerals 
+a manner to isolate 1000s 100s and other units of choice then convert and add to output string 
+
+Algorithm
+Constructor 
+take an integer argument and save to an instance variable (create a getter and setter method for it)
+
+Roman numeral hash 
+store the conversion of number to roman numerals as key value pairs from largest to smallest
+
+to_roman
+Convert to Roman Numerals 
+  Initialize a variable with an empty string to save the Roman conversion.
+  Iterate over the Roman Numerals collection:
+  If the numeric value of the current Roman numeral is less than the value of the input number,
+   add the Roman numerals to the string as many times as its value can fit. 
+  Subtract the numeric value of the added Roman numerals from the current input value,
+  and use the new input value in subsequent iterations. 
+  
+ return the string 
+ 
+ 

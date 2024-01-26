@@ -1,0 +1,35 @@
+Write a program that takes a word and a list of possible anagrams and selects
+the correct sublist that contains the anagrams of the word.
+
+For example, given the word "listen" and a list of candidates like "enlists",
+"google", "inlets", and "banana", the program should return a list containing "inlets".
+Please read the test suite for the exact rules of anagrams.
+
+Understanding the problem 
+given a list of possible anagrams and a word 
+select the words from the sublist that are anagrams of the first word that arent the first word and are unique
+if no words are found return an empty array
+case also does not matter but the same lowercases version of the word is still the same word 
+
+Example and test cases 
+based of of the test cases we need a class called Anagram that has 2 methods 
+  the constructor method takes a string argument 
+  
+  the match method that take a collection of words and returns the anagrams 
+  
+Datastructure 
+the inputs are a string and array 
+the output is either an array of anagrams or empty array 
+
+algorithm 
+create the Anagram class with 2 methods 
+the constructor method will take a string argument and assign it to an instance variable called word 
+
+the match method will take an array argument that consists of words 
+  create a local variable named anagrams and assign the array of selected anagrams to it
+    the selection is done by making the words lowercase and sort them alphabetically 
+    if these values are equal to `word` they are selected 
+    
+  then eleminate the non unique values 
+  
+return this array

@@ -1,0 +1,53 @@
+Problem
+Write a program to determine whether a triangle is equilateral, isosceles, or scalene.
+An equilateral triangle has all three sides the same length.
+An isosceles triangle has exactly two sides of the same length.
+A scalene triangle has all sides of different lengths.
+Note: For a shape to be a triangle at all, all sides must be of length > 0,
+and the sum of the lengths of any two sides must be greater than the length of the third side.
+
+
+Understanding the problem
+Input: triangle object with 3 arguments representing each side
+Output: the type of triangle or invalid triangle error 
+
+explicit requirements:
+Given 3 numbers as arguments to the constructor method to repseresent all 3 sides of a triangle
+create an instance method that will validate the sides to either be a triangle or not 
+then if it's valid evaluate if the sides make up 1 of the 3 triangle options 
+a isosceles triangle 2 same 1 different side
+a equilateral triangle has all same sides 
+a scalene triangle has all different sides  
+
+a triangle is not valid if one of the sides is less then or equal to 0 
+the sum of the lengths of any two sides must be greater than the length of the third side
+
+Examples and testcases 
+What classes do we need to make?
+-We require a Triangle class
+
+What does the constructor method look like?
+-The constructor takes 3 arguments that repseresent the 3 sides of a triangle
+an exception is raised in the constructor if any side length is <= 0.
+an exception is raised if the side lengths taken together don't describe a valid triangle
+
+what are the methods that we need(just their names and purpose)
+We need a `kind` to determine what kind of triangle we have 
+
+DataStructure
+I will store the sides into an array 
+
+Algorithm
+Constructor 
+-save the three sides into an array named @sides
+-Check whether any side length is less than or equal to zero. If so, raise an exception.
+-Check whether any sum of two sides is less then one side. If so, raise an exception
+Both execptions should raise an ArgumentError 
+==========================
+
+kind - instance method  
+---
+-Compare the values representing the three side lengths
+-If all three side lengths are equal return 'equilateral'.
+-If the triangle is not equilateral, but any two side lengths are equal to one another, return 'isosceles'.
+-If none of the side lengths are equal to one another, return 'scalene'.
